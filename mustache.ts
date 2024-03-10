@@ -2,7 +2,7 @@ import {readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync} from '
 import Handlebars from 'handlebars';
 import {Product, ProductImage} from './transform';
 
-const ogSiteName = 'reinhoiz.de';
+const ogSiteName = 'https://devfsp.github.io/reinhoiz/';
 
 interface MetaAttributes {
   ogImage: string;
@@ -53,7 +53,7 @@ const homeModel: PageHome = {
     ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. reinhoiz.de',
     ogDescription: 'Hier findest du Bastelsachen aus Holz- und Papier',
     ogType: 'website',
-    ogUrl: 'https://www.reinhoiz.de',
+    ogUrl: 'https://devfsp.github.io/reinhoiz/',
   },
 };
 writeFileSync('dist/bootstrap/index.html', pageTemplate(homeModel), 'utf-8');
@@ -137,7 +137,7 @@ const dataProtectionModel: Page = {
     ogSiteName,
     ogTitle: 'Datenschutzerklärung',
     ogType: 'website',
-    ogUrl: `https://devfsp.github.io/reinhoiz//datenschutz.html`,
+    ogUrl: `https://devfsp.github.io/reinhoiz/datenschutz.html`,
   },
 };
 writeFileSync('dist/bootstrap/datenschutz.html', pageTemplate(dataProtectionModel), 'utf-8');

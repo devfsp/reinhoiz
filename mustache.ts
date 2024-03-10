@@ -73,7 +73,7 @@ for (let product of products) {
       ogSiteName,
       ogTitle: product.name,
       ogType: 'website',
-      ogUrl: `https://www.reinhoiz.de/produkt/${product.id}/`,
+      ogUrl: `https://devfsp.github.io/reinhoiz/produkt/${product.id}/`,
     },
   };
 
@@ -102,7 +102,7 @@ for (let tag of tags) {
       ogSiteName,
       ogTitle: `Kategorie ${tag}`,
       ogType: 'website',
-      ogUrl: `https://www.reinhoiz.de/kategorie/${tag}.html`,
+      ogUrl: `https://devfsp.github.io/reinhoiz/kategorie/${tag}.html`,
     },
   };
   if (!existsSync(`dist/bootstrap/kategorie`)) {
@@ -122,7 +122,7 @@ const impressumModel: Page = {
     ogSiteName,
     ogTitle: 'Impressum',
     ogType: 'website',
-    ogUrl: `https://www.reinhoiz.de/impressum.html`,
+    ogUrl: `https://devfsp.github.io/reinhoiz/impressum.html`,
   },
 };
 writeFileSync('dist/bootstrap/impressum.html', pageTemplate(impressumModel), 'utf-8');
@@ -137,7 +137,7 @@ const dataProtectionModel: Page = {
     ogSiteName,
     ogTitle: 'Datenschutzerklärung',
     ogType: 'website',
-    ogUrl: `https://www.reinhoiz.de/datenschutz.html`,
+    ogUrl: `https://devfsp.github.io/reinhoiz//datenschutz.html`,
   },
 };
 writeFileSync('dist/bootstrap/datenschutz.html', pageTemplate(dataProtectionModel), 'utf-8');
@@ -156,7 +156,7 @@ const _404Model: PageHome = {
     ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. reinhoiz.de',
     ogDescription: 'Hier findest du Bastelsachen aus Holz- und Papier',
     ogType: 'website',
-    ogUrl: 'https://www.reinhoiz.de',
+    ogUrl: 'https://devfsp.github.io/reinhoiz/',
   },
 };
 writeFileSync('dist/bootstrap/404.html', pageTemplate(_404Model), 'utf-8');

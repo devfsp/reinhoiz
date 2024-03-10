@@ -2,7 +2,7 @@ import {readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync} from '
 import Handlebars from 'handlebars';
 import {Product, ProductImage} from './transform';
 
-const ogSiteName = 'Holzwerkskunst.de';
+const ogSiteName = 'reinhoiz.de';
 
 interface MetaAttributes {
   ogImage: string;
@@ -50,10 +50,10 @@ const homeModel: PageHome = {
   metaAttributes: {
     ogImage: products[0].images[0].large,
     ogSiteName,
-    ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. Holzwerkskunst.de',
+    ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. reinhoiz.de',
     ogDescription: 'Hier findest du Bastelsachen aus Holz- und Papier',
     ogType: 'website',
-    ogUrl: 'https://www.holzwerkskunst.de',
+    ogUrl: 'https://www.reinhoiz.de',
   },
 };
 writeFileSync('dist/bootstrap/index.html', pageTemplate(homeModel), 'utf-8');
@@ -73,7 +73,7 @@ for (let product of products) {
       ogSiteName,
       ogTitle: product.name,
       ogType: 'website',
-      ogUrl: `https://www.holzwerkskunst.de/produkt/${product.id}/`,
+      ogUrl: `https://www.reinhoiz.de/produkt/${product.id}/`,
     },
   };
 
@@ -102,7 +102,7 @@ for (let tag of tags) {
       ogSiteName,
       ogTitle: `Kategorie ${tag}`,
       ogType: 'website',
-      ogUrl: `https://www.holzwerkskunst.de/kategorie/${tag}.html`,
+      ogUrl: `https://www.reinhoiz.de/kategorie/${tag}.html`,
     },
   };
   if (!existsSync(`dist/bootstrap/kategorie`)) {
@@ -122,7 +122,7 @@ const impressumModel: Page = {
     ogSiteName,
     ogTitle: 'Impressum',
     ogType: 'website',
-    ogUrl: `https://www.holzwerkskunst.de/impressum.html`,
+    ogUrl: `https://www.reinhoiz.de/impressum.html`,
   },
 };
 writeFileSync('dist/bootstrap/impressum.html', pageTemplate(impressumModel), 'utf-8');
@@ -137,7 +137,7 @@ const dataProtectionModel: Page = {
     ogSiteName,
     ogTitle: 'Datenschutzerklärung',
     ogType: 'website',
-    ogUrl: `https://www.holzwerkskunst.de/datenschutz.html`,
+    ogUrl: `https://www.reinhoiz.de/datenschutz.html`,
   },
 };
 writeFileSync('dist/bootstrap/datenschutz.html', pageTemplate(dataProtectionModel), 'utf-8');
@@ -153,10 +153,10 @@ const _404Model: PageHome = {
   metaAttributes: {
     ogImage: products[0].images[0].large,
     ogSiteName,
-    ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. Holzwerkskunst.de',
+    ogTitle: 'Schöne Bastelsachen aus Holz- und Papier. reinhoiz.de',
     ogDescription: 'Hier findest du Bastelsachen aus Holz- und Papier',
     ogType: 'website',
-    ogUrl: 'https://www.holzwerkskunst.de',
+    ogUrl: 'https://www.reinhoiz.de',
   },
 };
 writeFileSync('dist/bootstrap/404.html', pageTemplate(_404Model), 'utf-8');

@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate page
         run: npm run mustache
-        
+
       - name: FTP-Deploy-Action
         if: success()
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
@@ -39,3 +39,4 @@ jobs:
           LOCAL_DIR: dist/bootstrap
           METHOD: sftp
           PORT: 22
+          ARGS: --delete

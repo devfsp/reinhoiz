@@ -28,17 +28,9 @@ jobs:
 
       - name: Generate page
         run: npm run mustache
-
-      - name: Deploy
-        if: success()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/bootstrap
-          publish_branch: gh-pages
-          cname: holzwerkskunst.de
-
+        
       - name: FTP-Deploy-Action
+        if: success()
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
           FTP_SERVER: ${{ secrets.RH_URL }}

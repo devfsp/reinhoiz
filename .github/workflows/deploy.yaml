@@ -37,3 +37,13 @@ jobs:
           publish_dir: dist/bootstrap
           publish_branch: gh-pages
           cname: holzwerkskunst.de
+
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ${{ secrets.RH_URL }}
+        FTP_USERNAME: ${{ secrets.RH_SFTP_USER }}
+        FTP_PASSWORD: ${{ secrets.RH_SFTP_PASS }}
+        LOCAL_DIR: dist/bootstrap
+        METHOD: sftp
+        PORT: 22

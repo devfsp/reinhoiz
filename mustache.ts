@@ -11,7 +11,7 @@ interface MetaAttributes {
   ogType: string;
   ogUrl: string;
   ogSiteName: string;
-  ogDescription: string;
+  ogDescription: string | Handlebars.SafeString;  // Typ angepasst
 }
 
 interface Page {

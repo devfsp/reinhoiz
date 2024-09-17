@@ -14,7 +14,7 @@
   >
   {{/each}}
 </div>
-<p class="mt-2 lead">{{ product.description }}</p>
+<p class="mt-2 lead">{{{ product.description }}}</p>
 <div class="d-flex flex-wrap gap-5 justify-content-center mt-4">
   {{#each product.images}}
   <a href="/produkt/{{ this.id }}/{{ this.large }}"

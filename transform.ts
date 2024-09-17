@@ -2,6 +2,7 @@ import Jimp from 'jimp';
 import * as fs from 'fs';
 import YAML from 'yaml';
 import path from 'path';
+import { marked } from 'marked';  // Importiere marked
 
 const PRODUCTS_FOLDER = './products/';
 const DESTINATION_FOLDER = 'dist/bootstrap/produkt';
@@ -14,7 +15,7 @@ export interface ProductImage {
 export interface Product {
   id: string;
   name: string;
-  description: string;
+  description: string;  // HTML-Version der Beschreibung
   created: string;
   tags: string[];
   images: ProductImage[];
@@ -35,7 +36,7 @@ interface Spec {
   id: string;
   name: string;
   date: string;
-  description: string;
+  description: string;  // Markdown-Version der Beschreibung
   tags: string[];
 }
 
@@ -51,7 +52,8 @@ async function transform() {
     const product: Product = {
       id: data.spec.id,
       created: data.spec.date,
-      description: data.spec.description,
+      // Markdown in HTML umwandeln
+      description: marked(data.spec.description),  // Konvertiere die Beschreibung in HTML
       name: data.spec.name,
       tags: data.spec.tags,
       images: [],

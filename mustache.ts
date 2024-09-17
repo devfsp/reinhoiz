@@ -69,7 +69,7 @@ for (let product of products) {
     product: product,
     mainTemplate: () => 'product',
     metaAttributes: {
-      ogDescription: marked(product.description), 
+      ogDescription: new Handlebars.SafeString(marked(product.description)), 
       ogImage: product.images[0].large,
       ogSiteName,
       ogTitle: product.name,

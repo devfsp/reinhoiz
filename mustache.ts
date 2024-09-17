@@ -1,5 +1,6 @@
 import {readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync} from 'fs';
 import Handlebars from 'handlebars';
+import { marked } from 'marked';
 import {Product, ProductImage} from './transform';
 
 const ogSiteName = 'http://www.reinhoiz.de';
@@ -68,7 +69,7 @@ for (let product of products) {
     product: product,
     mainTemplate: () => 'product',
     metaAttributes: {
-      ogDescription: product.description,
+      ogDescription: marked(product.description), 
       ogImage: product.images[0].large,
       ogSiteName,
       ogTitle: product.name,

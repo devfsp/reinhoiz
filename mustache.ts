@@ -52,7 +52,7 @@ const homeModel: PageHome = {
     ogImage: products[0].images[0].large,
     ogSiteName,
     ogTitle: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de',
-    ogDescription: 'Hochwertige Dekorationsgegenstände aus Holz,
+    ogDescription: 'Hochwertige Dekorationsgegenstände aus Holz',
     ogType: 'website',
     ogUrl: 'http://www.reinhoiz.de',
   },
@@ -154,7 +154,7 @@ const _404Model: PageHome = {
   metaAttributes: {
     ogImage: products[0].images[0].large,
     ogSiteName,
-    ogTitle: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de reinhoiz.de',
+    ogTitle: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de',
     ogDescription: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de',
     ogType: 'website',
     ogUrl: 'http://www.reinhoiz.de',

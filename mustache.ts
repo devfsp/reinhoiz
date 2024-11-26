@@ -154,8 +154,8 @@ const _404Model: PageHome = {
   metaAttributes: {
     ogImage: products[0].images[0].large,
     ogSiteName,
-    ogTitle: 'Schöne Bastelsachen aus Holz. reinhoiz.de',
-    ogDescription: 'Hier findest du Bastelsachen aus Holz',
+    ogTitle: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de reinhoiz.de',
+    ogDescription: 'Hochwertige Dekorationsgegenstände aus Holz. reinhoiz.de',
     ogType: 'website',
     ogUrl: 'http://www.reinhoiz.de',
   },
